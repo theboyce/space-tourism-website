@@ -30,8 +30,8 @@ const Navbar = () => {
   const { toggleMenu, handleToggle } = useContext(NavContext);
 
   return (
-    <div className="h-[6rem] bg-transparent absolute top-[2.5rem] w-[100%] ">
-      <nav className="flex justify-between h-[100%]  items-center pl-[3.5rem]">
+    <div className="sm:h-[3rem] md:h-[6rem] bg-transparent absolute sm:top-[1.5rem] md:top-0 lg:top-[2.5rem] w-[100vw]  ">
+      <nav className="flex justify-between items-center h-[100%] sm:pl-[1.5rem] sm:pr-[1.5rem] md:pr-0 md:pl-[2.4rem] lg:pl-[3.5rem] ">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
           <g fill="none" fillRule="evenodd">
             <circle cx="24" cy="24" r="24" fill="#FFF" />
@@ -41,9 +41,9 @@ const Navbar = () => {
             />
           </g>
         </svg>
-        <hr className="border absolute border-stroke w-[38%] left-[11rem] z-50" />
-        {/* <div className="flex justify-around w-[55%] bg-slate-100/20 h-[6rem] border items-center backdrop-filter backdrop-blur-[20px] opacity-20"> */}
-        <div className="flex justify-center gap-20 w-[55%] h-[6rem] bg-white bg-opacity-[0.05]  backdrop-blur-[12px] backdrop-filter">
+        <hr className="border absolute border-stroke w-[35%] left-[10rem] z-50 hidden lg:block" />
+
+        <div className="md:flex lg:flex sm:hidden justify-center md:gap-[2rem] lg:gap-[5rem] md:w-[28.125rem] lg:w-[51.875rem] h-[6rem] bg-white bg-opacity-[0.05]  backdrop-blur-[12px] backdrop-filter  ">
           {/* Mapping on the nav elements */}
           {navElements.map((navElement, i) => {
             return (
@@ -57,41 +57,26 @@ const Navbar = () => {
                   'text-white font-barlow text-[16px] tracking-widest flex items-center hover:border-b-4 hover:border-hover'
                 }
               >
-                <span className="pr-[11px] font-bold">{navElement.id}</span>
+                <span className="pr-[11px] font-bold md:hidden lg:block">
+                  {navElement.id}
+                </span>
                 {navElement.name}
               </NavLink>
             );
           })}
-          {/* home */}
-          {/* <NavLink
-            to="/"
-            style={({ isActive }) =>
-              isActive ? { borderBottom: '2px solid red' } : undefined
-            }
-            className={
-              'text-white font-barlow text-[16px] tracking-widest flex items-center'
-            }
-          >
-            <span className="pr-[11px] font-bold">00</span> HOME
-          </NavLink>
-          <NavLink
-            to="/crew"
-            style={({ isActive }) =>
-              isActive ? { borderBottom: '2px solid red' } : undefined
-            }
-            className={
-              'text-white font-barlow text-[16px] tracking-widest flex items-center'
-            }
-          >
-            <span className="pr-[11px] font-bold">02</span> CREW
-          </NavLink> */}
         </div>
-        <button
+
+        <svg
           onClick={handleToggle}
-          className="text-white px-8 py-4 bg-yellow-400"
+          className="md:hidden lg:hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="21"
         >
-          Test
-        </button>
+          <g fill="#D0D6F9" fillRule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+          </g>
+        </svg>
       </nav>
     </div>
   );

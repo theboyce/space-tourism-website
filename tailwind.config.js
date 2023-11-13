@@ -2,6 +2,12 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      sm: '375px',
+      md: '768px',
+      lg: '1440px',
+    },
+
     extend: {
       fontFamily: {
         bellefair: ['Bellefair'],
@@ -16,6 +22,8 @@ export default {
       },
       backgroundImage: {
         'home-lg': "url('/src/assets/home/background-home-desktop.jpg')",
+        'home-md': "url('/src/assets/home/background-home-tablet.jpg')",
+        'home-sm': "url('/src/assets/home/background-home-mobile.jpg')",
         'destination-lg':
           "url('/src/assets/destination/background-destination-desktop.jpg')",
         'crew-lg': "url('/src/assets/crew/background-crew-desktop.jpg')",
