@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         bellefair: ['Bellefair'],
         barlow: ['Barlow Condensed'],
+        'barlow-regular': ['Barlow'],
       },
       colors: {
         dark: '#0B0D17',
@@ -26,9 +27,19 @@ export default {
         'home-sm': "url('/src/assets/home/background-home-mobile.jpg')",
         'destination-lg':
           "url('/src/assets/destination/background-destination-desktop.jpg')",
+        'destination-md':
+          "url('/src/assets/destination/background-destination-tablet.jpg')",
+        'destination-sm':
+          "url('/src/assets/destination/background-destination-mobile.jpg')",
         'crew-lg': "url('/src/assets/crew/background-crew-desktop.jpg')",
+        'crew-md': "url('/src/assets/crew/background-crew-tablet.jpg')",
+        'crew-sm': "url('/src/assets/crew/background-crew-mobile.jpg')",
         'technology-lg':
           "url('/src/assets/technology/background-technology-desktop.jpg')",
+        'technology-lg':
+          "url('/src/assets/technology/background-technology-tablet.jpg')",
+        'technology-lg':
+          "url('/src/assets/technology/background-technology-mobiile.jpg')",
       },
     },
   },
