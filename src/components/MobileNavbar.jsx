@@ -9,7 +9,7 @@ const MobileNavbar = () => {
   const { toggleMenu, handleToggle } = useContext(NavContext);
 
   return (
-    <div className="h-[100vh] w-[70%] bg-white-500 backdrop-blur-[40px] backdrop-filter backdr md:hidden lg:hidden absolute left-[30%]">
+    <div className="h-[100vh] w-[70%] bg-white-500 backdrop-blur-[40px] backdrop-filter backdr md:hidden lg:hidden absolute left-[30%] z-10">
       {/* <div> */}
       <svg
         className="absolute top-[2.5rem] left-[17rem]"
@@ -25,7 +25,7 @@ const MobileNavbar = () => {
       </svg>
 
       {/* Mobile nav links */}
-      <div className=" flex flex-col items-end gap-[2rem] pl-[2rem] mt-[40%] border border-solid border-red-500">
+      <div className=" flex flex-col items-end gap-[2rem] pl-[2rem] mt-[40%] ">
         {navElements.map((navElement, i) => {
           return (
             <NavLink
